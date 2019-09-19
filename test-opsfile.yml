@@ -1,0 +1,13 @@
+- type: replace
+  path: /instance_groups/name=service-dashboard/jobs/name=dashboard-api/properties/dashboard-api/allow_instance_recreate?
+  value: true
+
+- type: replace
+  path: /instance_groups/name=broker/jobs/name=anynines-service-broker/properties/anynines_service_broker/jobs/update_instances_locked_state_interval?
+  value: 60
+- type: replace
+  path: /instance_groups/name=service-dashboard/jobs/name=dashboard-api/properties/anynines_service_broker/jobs?/update_instances_locked_state_interval?
+  value: 60
+- type: replace
+  path: /instance_groups/name=migrate-service-broker-encrypted-database-fields/jobs/name=migrate-encrypted-database-fields/properties/anynines_service_broker/jobs/update_instances_locked_state_interval?
+  value: 60
